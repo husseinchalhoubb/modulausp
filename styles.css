@@ -1,0 +1,408 @@
+/* General Styles */
+.file1-window {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container Styles */
+.file1-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* Option A for matching heights */
+    height: 800px;
+    width: 100vw;
+}
+
+/* Photo and Content Area Styles */
+.file1-photo-area,
+.file1-content-area {
+    flex: 1;
+    width: 50%;
+    overflow: hidden;
+}
+
+/* Photo Area Styles */
+.file1-photo-area {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    justify-content: center;
+    padding: 20px 0 10px 100px;
+}
+
+.file1-photo-area img {
+    width: 600px;
+    height: 800px;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    margin-left: 0px;
+    border-radius: 25px;
+    object-position: bottom;
+    /* Option A for making photo bigger at bottom */
+}
+
+.file1-photo-area img.active {
+    opacity: 1;
+}
+
+/* Content Area Styles */
+.file1-content-area {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 120px 0 0;
+    overflow-y: auto;
+}
+
+/* Toggle Div Styles */
+.file1-toggle-div {
+    margin-bottom: 15px;
+    cursor: pointer;
+    border: 1px lightblue;
+    margin-left: 3px;
+    padding: 15px;
+    box-shadow: 0 0 4px lightblue;
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+/* Toggle Styles */
+.file1-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file1-toggle-icon {
+    transition: transform 0.5s ease;
+    margin: 20px;
+}
+
+
+/* Content Styles */
+.file1-content {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+}
+
+.file1-content.open {
+    max-height: 1300px;
+    opacity: 0.5;
+    /* Adjust opacity as needed */
+}
+
+/* Highlight and Normal Div Styles (unused?) */
+.file1-div-highlight {
+    background-color: lightblue;
+    transition: background-color 0.6s ease-out;
+}
+
+.file1-div-normal {
+    background-color: transparent;
+    transition: background-color 0.6s ease-out;
+}
+
+/* Head Styles */
+.file1-head {
+    padding: 20px 0 40px 130px;
+}
+
+.file1-head h1 {
+    font-size: 40px;
+}
+
+.file1-head p {
+    font-size: 20px;
+}
+
+/* Text Styles */
+.file1-toggle-title {
+    padding-left: 15px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.file1-li {
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+
+.file1-photo-area {
+    position: relative;
+    /* Enable relative positioning for child elements */
+}
+
+.file1-info-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 20px;
+    top: 0;
+    padding: 0px 5px;
+    height: 120px;
+    left: 0;
+    width: 260px;
+    margin-left: 160px;
+    margin-top: 50px;
+}
+
+.file1-info-overlay h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 45px;
+}
+
+.file1-info-overlay p {
+    margin: 3px 0;
+    font-size: 25px;
+    opacity: 0.6;
+}
+
+.file1-photo-area.active .file1-info-overlay {
+    opacity: 1;
+    /* Show the overlay when the photo area is active */
+}
+
+/* Media Queries for Small Screens (Less than 480px) */
+@media screen and (max-width: 480px) {
+    .file1-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        height: auto;
+        padding: 0 10px;
+        /* Add padding on left and right */
+    }
+
+    .file1-photo-area,
+    .file1-content-area {
+        width: 100%;
+    }
+
+    .file1-photo-area {
+        padding: 10px 5px 10px 10px;
+        margin-right: 10px;
+    }
+
+    .file1-photo-area img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        border-radius: 25px;
+        /* Fixed border radius */
+    }
+
+    .file1-content-area {
+        padding: 20px 0;
+        /* Adjust padding to match the layout */
+    }
+
+    .file1-info-overlay {
+        top: 25px;
+        left: 20px;
+        width: 45%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .file1-info-overlay p {
+        font-size: 100%;
+        padding-bottom: 5px;
+    }
+
+    .file1-toggle-div {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .file1-toggle {
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .file1-toggle-icon {
+        margin: 10px 0;
+        font-size: 10px;
+    }
+
+    .file1-head {
+        padding: 20px 10px;
+    }
+
+    .file1-head h1 {
+        font-size: 24px;
+    }
+
+    .file1-head p {
+        font-size: 16px;
+    }
+
+    .file1-span {
+        font-size: 20px;
+    }
+
+    .file1-li {
+        font-size: 14px;
+    }
+}
+
+/* Media Queries for Medium Screens (768px to 1220px) */
+@media screen and (min-width:769px)and (max-width: 1220px) {
+
+    .file1-photo-area img {
+        height: 100vh;
+        width: 100%;
+        padding-right: 0px;
+        margin-right: 5px;
+    }
+
+    .file1-info-overlay {
+        width: 170px;
+        height: 100px;
+        margin-top: 50px;
+        margin-left: 120px;
+        /* Adjusted margin */
+    }
+
+    .file1-info-overlay p {
+        font-size: 100%;
+    }
+
+    .file1-info-overlay h2 {
+        font-size: 40px;
+    }
+
+    .file1-toggle h2 {
+        font-size: 6px;
+    }
+}
+
+/* Media Queries for Very Large Screens (More than 2200px) */
+@media screen and (min-width: 2200px) {
+    .file1-container {
+        height: 100vh;
+    }
+
+    .file1-photo-area img {
+        width: 90%;
+        height: 50%;
+        margin-left: 50px;
+    }
+
+    .file1-toggle-div {
+        width: 90%;
+        border-radius: 40px;
+
+    }
+
+    .file1-info-overlay {
+        width: 370px;
+        height: 180px;
+        margin-left: 270px;
+        margin-top: 70px;
+        border-radius: 30px;
+    }
+
+    .file1-info-overlay h2 {
+        font-size: 75px;
+    }
+
+    .file1-info-overlay p {
+        font-size: 35px;
+    }
+
+    .file1-head h1 {
+        font-size: 50px;
+    }
+
+    .file1-head p {
+        font-size: 25px;
+    }
+
+    .file1-head {
+        margin-left: 100px;
+    }
+
+    .file1-span {
+        font-size: 50px;
+        padding: 20px;
+    }
+
+    .file1-content-area {
+        height: 100%;
+    }
+
+    .file1-toggle-icon {
+        padding-right: 20px;
+
+    }
+
+    .file1-li {
+        font-size: 35px;
+    }
+
+
+
+}
+
+@media screen and (min-width:481px)and (max-width: 768px) {
+
+
+    .file1-toggle-title {
+        font-size: 15px;
+    }
+
+    .file1-photo-area img {
+        width: auto;
+        border-radius: 25px;
+        padding-right: 100px;
+    }
+
+    .file1-toggle-div {
+        width: 40vw;
+    }
+
+    .file1-photo-area {
+        width: auto;
+        margin-left: 30px;
+    }
+
+    .file1-info-overlay {
+        width: 200px;
+        height: 100px;
+        margin-left: 10px;
+    }
+
+    .file1-info-overlay p {
+        font-size: 100%;
+    }
+
+    .file1-info-overlay h2 {
+        font-size: 50px;
+    }
+
+    .file1-content {
+        font-size: 5px;
+    }
+
+    .file1-span {
+        padding: 20px;
+        font-size: 40px;
+    }
+
+    .file1-toggle {
+        width: auto;
+        height: 50pxpx;
+    }
+}

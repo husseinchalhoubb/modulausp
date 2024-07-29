@@ -1,0 +1,60 @@
+[
+  {
+    "image": "_10.png",
+    "content_title": "Superior Construction Quality",
+    "content_list": [
+      "Unparalleled technical features",
+      "Rigorous workmanship",
+      "Premium quality fit & finish",
+      "Up to 30% lighter total building weight*",
+      "Green & durable"
+    ],
+    "overlay_info": {
+      "percentage": "30%",
+      "description": "Less building weight"
+    }
+  },
+  {
+    "image": "_20.png",
+    "content_title": "Higher Precision & Design Flexibility",
+    "content_list": [
+      "More layout options / customization",
+      "Higher assembly precision",
+      "Seamless integration of design & manufacturing",
+      "No transportation barriers or risks (as opposed to volumetric)"
+    ],
+    "overlay_info": {
+      "percentage": "20%",
+      "description": "Higher ROI"
+    }
+  },
+  {
+    "image": "_30.png",
+    "content_title": "Less Resources",
+    "content_list": [
+      "80% traditional labor activity offsite",
+      "75% less labor hours*",
+      "Less heavy machinery",
+      "No site warehouse",
+      "Reduction of site waste to 1-2%",
+      "Optimized warehousing RFID recognition software for all elements"
+    ],
+    "overlay_info": {
+      "percentage": "98%",
+      "description": "Reduction of site waste"
+    }
+  },
+  {
+    "image": "_40.png",
+    "content_title": "Faster Completion",
+    "content_list": [
+      "50 - 80% faster delivery*",
+      "Parallel infrastructure & superstructure",
+      "Not vulnerable to weather & onsite delays"
+    ],
+    "overlay_info": {
+      "percentage": "80%",
+      "description": "Faster project delivery"
+    }
+  }
+]
